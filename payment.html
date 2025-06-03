@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment - KOSAVE</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="app-container booking-page">
+    <header class="header with-back">
+      <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back
+      </a>
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="KOSAVE Logo">
+      </div>
+    </header>
+    
+    <div class="payment-container">
+      <h2>Pembayaran</h2>
+      <p>Silakan scan kode QR di bawah untuk membayar:</p>
+      <img src="assets/images/qr.png" alt="QR Code Pembayaran" class="qr-image" />
+
+      <p><strong>Total: Rp 68.750</strong></p>
+
+      <button class="primary-button" id="pay-button">Bayar Sekarang</button>
+    </div>
+
+    <div class="popup" id="popup-success">
+      <div class="popup-content">
+        <i class="fas fa-check-circle"></i>
+        <h2>Pembayaran Berhasil</h2>
+        <p>Terima kasih telah melakukan pembayaran!</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("pay-button").addEventListener("click", function () {
+      const popup = document.getElementById("popup-success");
+      
+      popup.classList.add("show");
+
+      setTimeout(() => {
+        popup.classList.remove("show");
+        window.location.href = 'home.html';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

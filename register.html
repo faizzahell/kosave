@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - KOSAVE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container auth-page register-page">
+    <main>
+      <section class="auth-form">
+        <h1>Create Account</h1>
+        
+        <div class="user-type-selector">
+          <p>Daftar Sebagai:</p>
+          <div class="selector-buttons">
+            <button class="selector-button active">Customer</button>
+            <button class="selector-button">Partner</button>
+          </div>
+        </div>
+        
+        <form class="form">
+          <div class="form-group">
+            <input type="text" placeholder="Full Name" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" placeholder="Email" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="tel" placeholder="Phone Number" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="password" placeholder="Password" required>
+          </div>
+          
+          <div class="form-group checkbox">
+            <label class="checkbox-container">
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+              I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+            </label>
+          </div>
+          
+          <button type="submit" class="primary-button full-width">Create Account</button>
+        </form>
+        
+        <p class="auth-switch">
+          Already have an account? <a href="index.html">Login</a>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

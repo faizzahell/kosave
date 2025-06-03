@@ -1,0 +1,209 @@
+/* Responsive Styles */
+
+/* Tablet (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .app-container {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  main {
+    padding-bottom: 80px; /* Larger space for bottom nav on tablets */
+  }
+
+  .storage-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .social-login {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .calendar-container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .booking-details, .fee-breakdown {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .preview-details {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .image-gallery {
+    height: 320px;
+  }
+}
+
+/* Desktop (1025px and above) */
+@media screen and (min-width: 1025px) {
+  body {
+    background-color: #F0F2F5;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .app-container {
+    max-width: 1000px;
+    min-height: calc(100vh - 48px);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .greeting, .search-bar {
+    width: 100%;
+  }
+
+  .map-container {
+    width: 40%;
+    height: 400px;
+    position: sticky;
+    top: 20px;
+  }
+
+  .storage-list {
+    width: 60%;
+    padding: var(--spacing-lg);
+  }
+
+  .storage-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .storage-image {
+    height: 160px;
+  }
+
+  /* Booking page */
+  .booking-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl);
+  }
+
+  .booking-section h2 {
+    width: 100%;
+  }
+
+  .calendar-container {
+    flex: 1;
+    min-width: 350px;
+  }
+
+  .booking-details, .fee-breakdown {
+    flex: 1;
+    min-width: 350px;
+  }
+
+  /* Preview page */
+  .preview-header {
+    width: 50%;
+  }
+
+  .image-gallery {
+    height: 400px;
+    position: sticky;
+    top: 0;
+  }
+
+  .preview-details {
+    width: 50%;
+    padding: var(--spacing-xl);
+  }
+
+  /* Auth pages */
+  .auth-page main {
+    padding: var(--spacing-xxl);
+  }
+
+  .auth-form {
+    max-width: 450px;
+    padding: var(--spacing-xl);
+    background-color: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Horizontal orientation for tablets and large phones */
+@media screen and (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  .storage-cards, .social-login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .preview-page main {
+    display: flex;
+  }
+
+  .preview-header {
+    width: 50%;
+  }
+
+  .image-gallery {
+    height: 100%;
+    min-height: 300px;
+    position: sticky;
+    top: 0;
+  }
+
+  .preview-details {
+    width: 50%;
+  }
+}
+
+/* Animations and transitions for larger screens */
+@media screen and (min-width: 768px) {
+  .storage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .primary-button, .selector-button, .social-button {
+    transition: all var(--transition-fast);
+  }
+
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 178, 227, 0.3);
+  }
+
+  .selector-button:hover:not(.active) {
+    background-color: rgba(0, 178, 227, 0.1);
+  }
+
+  .social-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .date:not(.faded):hover:not(.selected) {
+    background-color: var(--background);
+  }
+
+  .back-button:hover {
+    transform: translateX(-2px);
+  }
+
+  .bottom-nav a:hover:not(.active) {
+    color: var(--text-medium);
+  }
+}
